@@ -1,4 +1,10 @@
-input[type="bpm"] {
+body {
+    background: #ccddff;
+}
+
+input[id="bpm"] {
     display: block;
     font-size: 60px;
+    width:200px;
+    text-align:center;
 }

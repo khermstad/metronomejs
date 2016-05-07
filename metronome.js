@@ -6,7 +6,7 @@ var mute = 0;   // flag to check for muted
 var currentBeat = 0; // flag to keep track of currentBeat default:0 - 4/4 -- 1/2/3/4
 
 // first set basic values, timesig, and bpm
-Tone.Transport.timeSignature = [4, 4];
+Tone.Transport.timeSignature = 4;
 Tone.Transport.bpm.value = 120; // default bpm
 
 // click sound
@@ -29,6 +29,7 @@ var click = new Tone.NoiseSynth({
 //loop for click
 var loop = new Tone.Loop(function(time){
     click.triggerAttackRelease();
+    console.log(currentBeat);
     updateBeat(); // updates currentBeat for Visual Metronome (and maybe other uses later?)
 }, "4n").start(0);
 
@@ -76,13 +77,16 @@ function changeBpm(val) {
     return new_bpm;
 }
 
+
 // play()
+// global play button for metronome
 function play(){
     currentBeat = 1;
     Tone.Transport.start();
 }
 
 // stop()
+// global stop button for metronome
 function stop(){
     currentBeat = 0;
     updateBeat();

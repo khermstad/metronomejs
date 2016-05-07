@@ -7,11 +7,10 @@
 
 
 <body>
-
 <div class="metronome_container" align="center">
     <br>
     <!-- BPM display - starts at 120 -->
-    <input id="bpm" type="bpm" value="120" style="width:200px;text-align:center;" readonly/>bpm
+    <input id="bpm" value="120" readonly/>bpm
 
     <br><br>
 
@@ -20,20 +19,20 @@
     <button id="stopBtn" type="stopBtn" onClick="stop();">Stop</button>
 
     <!-- bpm modifier buttons -->
-    <button id="bmpi1"   type="bmpi1" onClick="changeBpm(1)">+1</button> <!-- increment BPM +1 -->
-    <button id="bmpd1"   type="bmpd1" onclick="changeBpm(-1)">-1</button> <!-- decrement BPM -1 -->
-    <button id="bmpi10"   type="bmpi10" onClick="changeBpm(10)">+10</button> <!-- increment BPM +10 -->
-    <button id="bmpd10"   type="bmpd10" onclick="changeBpm(-10)">-10</button> <!-- decrement BPM -10 -->
+    <button id="bmpi1" onClick="changeBpm(1)">+1</button> <!-- increment BPM +1 -->
+    <button id="bmpd1" onclick="changeBpm(-1)">-1</button> <!-- decrement BPM -1 -->
+    <button id="bmpi10" onClick="changeBpm(10)">+10</button> <!-- increment BPM +10 -->
+    <button id="bmpd10" onclick="changeBpm(-10)">-10</button> <!-- decrement BPM -10 -->
 
     <br><br>
     <!-- volume buttons -->
-    <button id="vu"   type="vu" onClick="changeVolume(2)">Vol +</button>
-    <button id="vd"   type="vd" onClick="changeVolume(-2)">Vol -</button>
-    <button id="mute" type="mute" onClick="muteVolume()">Mute</button>
+    <button id="vu"   onClick="changeVolume(2)">Vol +</button>
+    <button id="vd"   onClick="changeVolume(-2)">Vol -</button>
+    <button id="mute" onClick="muteVolume()">Mute</button>
 
     <br><br>
     <!-- reset button -->
-    <button id="reset" type="reset" onClick="reset()">Reset</button>
+    <button id="reset" onClick="reset()">Reset</button>
 
     <br><br>
 
@@ -44,6 +43,7 @@
     <img src="./img/circle50x50e.png" id="circle4"/>
 
 </div>
+
 
 </body>
 </html>
