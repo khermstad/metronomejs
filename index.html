@@ -7,43 +7,30 @@
 
 
 <body>
+
 <div class="metronome_container" align="center">
+    
     <br>
     <!-- BPM display - starts at 120 -->
     <input id="bpm" value="120" readonly/>bpm
-
+    
     <br><br>
-
     <!-- play stop controls -->
     <button id="playBtn" type="playBtn" onclick="play();">Play</button>
     <button id="stopBtn" type="stopBtn" onClick="stop();">Stop</button>
-
-    <!-- bpm modifier buttons -->
-    <button id="bmpi1" onClick="changeBpm(1)">+1</button> <!-- increment BPM +1 -->
-    <button id="bmpd1" onclick="changeBpm(-1)">-1</button> <!-- decrement BPM -1 -->
-    <button id="bmpi10" onClick="changeBpm(10)">+10</button> <!-- increment BPM +10 -->
-    <button id="bmpd10" onclick="changeBpm(-10)">-10</button> <!-- decrement BPM -10 -->
-
-    <br><br>
-    <!-- volume buttons -->
-    <button id="vu"   onClick="changeVolume(2)">Vol +</button>
-    <button id="vd"   onClick="changeVolume(-2)">Vol -</button>
-    <button id="mute" onClick="muteVolume()">Mute</button>
-
-    <br><br>
-    <!-- reset button -->
+     <!-- reset button -->
     <button id="reset" onClick="reset()">Reset</button>
 
     <br><br>
-
-    <!-- Visual Metronome Display -->
-    <img src="./img/circle50x50e.png" id="circle1"/>
-    <img src="./img/circle50x50e.png" id="circle2"/>
-    <img src="./img/circle50x50e.png" id="circle3"/>
-    <img src="./img/circle50x50e.png" id="circle4"/>
+    <!-- input range for BPM -->
+    <input id="bpmslider" type="range" min="1" max="450" value="120" step="1"
+	oninput="updateBPMfromSlider()" onchange="updateBPMfromSlider()"/>
+    
+    <br><br>
+    <!-- input range for Volume -->
+    <input id="volslider" type="range" min"0" max="100" value="50" step="1"
+	oninput="updateVolFromSlider()" onchange="updateVolFromSlider()"/>
 
 </div>
-
-
 </body>
 </html>
